@@ -1,29 +1,19 @@
 import React from 'react'
 import ReactCountryFlag from "react-country-flag"
+import moment from "moment-jalaali";
 
 const api = {
   base :"https://currency.jafari.li/json"
 }
 
-function App() {
-  const dateBuilder = (d) => {
-    let months = ["Jan" , "Feb" , "March" , "April" , "May", "June" , "july" , "August" , "Sep" , "Oct" , "Nov" , "Dec"];
-    let days = ["Sunday" , "Monday" , "Tuesday" , "Wednesday" , "Thursday" , "Friday" , "Saturday"];
 
-    
-    let houer=d.houer();
-    let day = days[d.getDay()];
-    let date = d.getDate();
-    let month = months[d.getMonth()];
-    let year = d.getFullYear();
-    
-    return `${day} ${date} ${month} ${year} ${houer}`
-  }
+function App() {
+ 
 
   return (
     <div className="app">
       <main>
-      <div className="date">{dateBuilder(new Date())}</div>
+     
      
         <div className='currency' >
          <div className='flag'><ReactCountryFlag countryCode="US" svg /></div>

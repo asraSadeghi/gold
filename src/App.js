@@ -1,42 +1,52 @@
-import React from 'react'
-import ReactCountryFlag from "react-country-flag"
-import moment from "moment-jalaali";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import {CodeToCountry, CodeToFlag} from "./constants";
+import Currency from './Currency.js';
+import WatingApi from './waite';
 
-const api = {
-  base :"https://currency.jafari.li/json"
-}
+const App = () => {
+  
+  const [currencies, setCurrencies] = useState([]);
 
+  const ApiUrl = "https://currency.jafari.li/json";
+  useEffect(() => {
+    axios({
+      method: "GET",
+      url: ApiUrl
+    })
+    .then(response => {
+      setCurrencies(response.data.Currency);
+    })
+    .catch(
+      //error => console.log(error)
+    );
+  }, []);
 
-function App() {
- 
+  useEffect(() => {
+    //console.log(currencies.length);
+  }, [currencies]);
 
   return (
-    <div className="app">
-      <main>
-     
-     
-        <div className='currency' >
-         <div className='flag'><ReactCountryFlag countryCode="US" svg /></div>
-         <div className='currency1'>US Dollar</div>
-        
-         <div className='sell'>فروش:25950</div>
-         <div className='buy'>خرید:25850</div>
-       
-        </div>
-        <div className='gold' >
-         <div className='coin'>1 Old Azadi</div>
-         <div className='sell'>10900000</div>
-         <div className='buy'>10400000</div>
 
-        </div>
-        <div className='item' >
-          <div className='name'>Ounce</div>
-          <div className='rate'>1825.96</div>
-
-        </div>
-
-
-      </main>
+    <div className="cards-main">
+      <h3 className="heading_title">نرخ ارزها :</h3>
+      {
+        currencies.length === 0 ? (
+          <WatingApi />
+      ) : (
+        currencies.map((currency, index) => {
+          return(
+            <Currency
+            index={index} 
+            currency_buy={currency.Buy} 
+            currency_sell={currency.Sell} 
+            courency_code={CodeToCountry[currency.Code]}
+            courency_flag={CodeToFlag[currency.Code]}
+            />
+          )
+        })
+      )
+      }
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import {CodeToFlag,PersiangoldName} from "./constants";
+import {flag,PersiangoldName} from "./change";
 import Currency from './Currency.js';
 import WatingApi from './waite';
 
@@ -41,7 +41,7 @@ const gold = () => {
                       currency_buy={item.Rate} 
                       currency_sell={item.Rate} 
                       courency_code={PersiangoldName[item.Name]}
-                      courency_flag={CodeToFlag[item.Name]}
+                      courency_flag={flag[item.Name]}
                       />
                     )
                   })

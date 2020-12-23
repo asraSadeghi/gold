@@ -8,18 +8,32 @@
 
 
 .app{
-  background-image: url(./assets/world.jpg);
+  background-image: url(./assets/search.jpg);
   background-size: cover;
   background-position: bottom;
   transition: 0.4 ease-out;
+  max-width: 320px;
+
 
 }
 
 main{
   min-height: 100vh;
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.63), rgb(0, 0, 0,0.78));
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.23), rgb(0, 0, 0,0.28));
 } 
 
 .app .currency{
-background-color: blue;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.43), rgb(0, 0, 0,0.4));
+  margin: 7px;
+  display: flex;
+  min-height: 30px;
+  align-items: center;
+  padding: 1rem 2rem 1rem 2rem;
+  direction: rtl;
+  font-weight: 700;
+
+}
+
+.app .updata{
+  padding-right: 0.75rem;
 }

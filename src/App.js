@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import currency from './currency';
+
 import data from "./data";
 
 
@@ -17,11 +17,13 @@ class App extends Component {
                   return (
                     <div key={i}>
                       <div className="currency">
-                        <div href={data.title}>
-                          {data.title}
+                        <div >
+                          {data.title}  
+                          {data.p }    
                         </div>
-                        <div>
-                          {data.p }
+                        <div className="updata">
+                          
+                          اپدیت: 
                           {data.updated_at}
                          
                           

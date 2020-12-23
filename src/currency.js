@@ -2,15 +2,32 @@ import React, { Component } from 'react';
 import data from "./data"; 
 
 
-const socialMediaList = data.SocialMedias;
 
-class Currency extends Component {
+
+class currency extends Component {
 	render() {
 		return (
-            <ul>
-                {socialMediaList.map(s => (<li>{s}</li>))}
-            </ul>
+            <div>
+            {
+                data.data.map((data, i) => {
+                    return (
+                        <div key={i}>
+                            <div>
+                                <div href={data.title}>
+                                </div>
+                                <div>
+                                    <div>
+                                        
+                                    </div>
+                                       
+                                </div>
+                            </div>
+                        </div>
+                    );
+                })
+            }
+        </div>
         );
     }
 } 
-export default Currency;
+export default currency;

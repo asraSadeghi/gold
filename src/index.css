@@ -19,3 +19,7 @@ main{
   min-height: 100vh;
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.63), rgb(0, 0, 0,0.78));
 } 
+
+.app .currency{
+background-color: blue;
+}

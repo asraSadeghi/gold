@@ -31,13 +31,20 @@ main{
   align-items: center;
   padding: 1rem 2rem 1rem 2rem;
   direction: rtl;
-  font-weight: 500;
+  font-weight: 800;
 
+}
+.app .header{
+  height: 5rem;
+  font-weight: 800;
+  font-size: 50px;
+  direction: rtl;
+  
 }
 
 .app .updata{
   padding-right: 1px;
-  font-weight: 300;
+  font-weight: 600;
 }
 .app .progress{
   width: 10%

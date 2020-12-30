@@ -9,6 +9,9 @@ class App extends Component {
     return (
       <div className="app">
         <main>
+          <div className="header">
+            لیست قیمت ارز
+          </div>
 
           <currency>
             <div>
@@ -31,9 +34,9 @@ class App extends Component {
 
                         </div>
 
-                        <div class="progress">
+                        <span class="progress">
                           <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow={data.dp} aria-valuemin="0" aria-valuemax="5"> {data.dp}</div>
-                        </div>
+                        </span>
 
 
                       </div>

@@ -9,10 +9,11 @@
 
 .app{
   background-image: url(./assets/search.jpg);
-  background-size: cover;
+  
   background-position: bottom;
   transition: 0.4 ease-out;
-  max-width: 320px;
+  /* max-width: 320px; */
+  
 
 
 }
@@ -30,10 +31,14 @@ main{
   align-items: center;
   padding: 1rem 2rem 1rem 2rem;
   direction: rtl;
-  font-weight: 700;
+  font-weight: 500;
 
 }
 
 .app .updata{
-  padding-right: 0.75rem;
+  padding-right: 1px;
+  font-weight: 300;
+}
+.app .progress{
+  width: 10%
 }
